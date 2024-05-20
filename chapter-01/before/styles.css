@@ -51,3 +51,11 @@ header + p::first-letter {
     color: crimson;
     font-style: italic;
 }
+
+[lang="it"]::before {
+    content: "🏴"
+}
+
+* {
+    font-family: sans-serif;
+}
