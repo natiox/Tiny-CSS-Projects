@@ -32,5 +32,6 @@ article p span:nth-last-child(2) {
 
 .plays ul { margin-left: 162px }
 
-
-
+main {
+  display: grid;
+}
