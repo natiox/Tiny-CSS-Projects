@@ -9,17 +9,42 @@ body {
   color: #151412
 }
 
-main { margin: 24px }
+main { 
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 1fr)) 250px;
+  grid-template-areas: 
+  "header  header  header"
+  "content content author"
+  "content content aside"
+  "plays     .     aside"
+  "footer  footer  footer";
+  gap: 20px;
+  margin: 24px 
+}
+
+@media (min-width: 955px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "header header header"
+    "content author aside"
+    "content plays aside"
+    "footer footer footer";
+  }
+}
+
+header { grid-area: header }
+article { grid-area: content }
+aside { grid-area: aside }
+.author-details { grid-area: author }
+.plays { grid-area: plays }
+footer { grid-area: footer }
 
 img { 
   float: left; 
   margin: 12px 12px 12px 0
 }
 
-main > * { 
-  border: solid 1px #bfbfbf;
-  padding: 12px;
-}
 main > *, section { display: flow-root }
 
 p, ul { line-height: 1.5 }
@@ -31,7 +56,3 @@ article p span:nth-last-child(2) {
 }
 
 .plays ul { margin-left: 162px }
-
-main {
-  display: grid;
-}
