@@ -1,0 +1,33 @@
+body {
+    --primary: #de3c4b;
+    --primary-contrast: white;
+    --secondary: #717777;
+    --font: Helvetica, Arial, sans-serif;
+    --text-color: #2D3142;
+    --card-background: #ffffff;
+    --technologies-background: #ffdadd;
+    --page-background: linear-gradient(#4F5D75, #2D3142);
+    --imageSize: 200px;
+
+    background: var(--page-background);
+    font-family: var(--font);
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: var(--card-background);
+    box-shadow: 0 0 55px rgba(38, 40, 45, .75);
+    width: 75vw;
+    max-width: 500px;
+    border-radius: 4px;
+}
