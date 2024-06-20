@@ -18,6 +18,14 @@ body {
     align-items: center;
 }
 
+img.portrait {
+    width: var(--imageSize);
+    height: var(--imageSize);
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: calc(-1 * var(--imageSize)/3);
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -30,4 +38,29 @@ html, body {
     width: 75vw;
     max-width: 500px;
     border-radius: 4px;
+    text-align: center;
+    margin: calc(-1 * var(--imageSize)/3 + 24px) 24px;
+
+    background-image: radial-gradient(
+        circle at top,
+        var(--primary) 50%,
+        transparent 50%,
+        transparent
+        );
+    background-size: 1500px 500px;
+    background-position: center -300px;
+    background-repeat: no-repeat;
+    padding: 0 24px 24px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 36px 0 0;
+    color: var(--primary)
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--secondary)
 }
