@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+
 html {
   padding: 0;
   margin: 0;
@@ -19,7 +21,26 @@ img {
   max-width: 100%;
 }
 
+img.compass {
+  aspect-ratio: 1;
+  float: right;
+  shape-outside: circle(50%);
+}
+
 p {
   line-height: 1.5;
   text-align: justify;
+}
+
+p:first-of-type::first-letter {
+  font-size: 6em;
+  float: left;
+  line-height: .5;
+  font-family: 'Passions Conflict', cursive;
+}
+
+blockquote {
+  font-family: 'Passions Conflict', cursive;
+  font-size: 2em;
+  line-height: 1;
 }
