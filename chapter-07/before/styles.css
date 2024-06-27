@@ -24,7 +24,11 @@ img {
 img.compass {
   aspect-ratio: 1;
   float: right;
-  shape-outside: circle(50%);
+  /* shape-outside: circle(50%);
+  clip-path: circle(50%); */
+  margin-left: 1rem;
+  border-radius: 50%;
+  shape-outside: margin-box;
 }
 
 p {
