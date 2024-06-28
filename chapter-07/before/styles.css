@@ -31,6 +31,14 @@ img.compass {
   shape-outside: margin-box;
 }
 
+img.dog {
+  aspect-ratio: 126/161;
+  float: left;
+  shape-outside: url("https://raw.githubusercontent.com/michaelgearon/Tiny-CSS-Projects/main/chapter-07/before/img/dog.svg");
+  shape-margin: 1em;
+  margin-right: 1em;
+}
+
 p {
   line-height: 1.5;
   text-align: justify;
