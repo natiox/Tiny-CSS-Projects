@@ -5,12 +5,19 @@ body {
     color: #171717;
     font-variant-numeric: lining-nums;
     background: #fbffff;
+    padding: 1rem;
 }
 
 section {
+    margin: 1rem 0;
     background: #ffffff;
     border-radius: 4px;
     box-shadow: 2px 2px 7px #aeb7b7;
+}
+
+section h2 {
+    padding: 1rem;
+    margin: 0;
 }
 
 h1,h2 {
@@ -97,6 +104,22 @@ table {
     width: 100%;
 }
 
+dl {
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: auto max-content;
+    padding: 0 1rem;
+}
+
+.actions {
+    padding: 1rem;
+    text-align: center;
+}
+
+.actions a {
+    margin: 0 .25rem .5rem;
+}
+
 @media(max-width: 549px) {
     td, tr {
         display: block;
@@ -124,4 +147,11 @@ table {
         align-items: baseline;
     }
     tfoot th { padding: 5px }
+}
+
+@media(min-width: 550px) {
+    th:nth-of-type(n+3),
+    td:nth-of-type(n+3) {
+        text-align: right;
+    }
 }
