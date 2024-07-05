@@ -35,6 +35,10 @@ input {
     display: inline-block;
 }
 
+input[type="number"] {
+    text-align: right;
+}
+
 button:hover,
 .button:hover {
     outline: dotted 1px #2c6c69;
@@ -150,8 +154,25 @@ dl {
 }
 
 @media(min-width: 550px) {
+    th {
+        text-align: left;
+    }
+
+    td, th {
+        padding: 10px;
+    }
+
     th:nth-of-type(n+3),
     td:nth-of-type(n+3) {
         text-align: right;
+    }
+}
+
+@media(min-width: 995px) {
+    .section-container {
+        display: flex;
+        flex-basis: 250px;
+        flex-grow: 1;
+        gap: 20px;
     }
 }
