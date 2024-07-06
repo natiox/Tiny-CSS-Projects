@@ -8,6 +8,11 @@ body {
     padding: 1rem;
 }
 
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 section {
     margin: 1rem 0;
     background: #ffffff;
@@ -171,8 +176,9 @@ dl {
 @media(min-width: 995px) {
     .section-container {
         display: flex;
-        flex-basis: 250px;
-        flex-grow: 1;
         gap: 20px;
     }
+
+    section.my-cart { flex-grow: 1; }
+    section.summmary { flex-basis: 250px; }
 }
