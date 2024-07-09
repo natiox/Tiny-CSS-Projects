@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("./fonts/open-sans-variable.woff2") format("woff2-variations");
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: local("Open Sans Italic"),
+        url("./fonts/open-sans-regular.woff2") format("woff2"),
+        url("./fonts/open-sans-variable.woff") format("woff");
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,11 +30,13 @@ body {
     height: 270px;
     margin: auto;
     position: relative;
+    color: white;
 }
 
 .card-item__side {
     height: 100%;
     width: 100%;
+    background: url("bg.jpeg") left top / cover blue;
 }
 
 
@@ -76,5 +96,10 @@ body {
     align-items: center;
     justify-content: flex-end;
     background: rgb(255, 255, 255);
+    color: rgb(26, 59, 93);
 }
 
+.card-item__holder,
+.card-item__dateTitle {
+    opacity: 0.7;
+}
