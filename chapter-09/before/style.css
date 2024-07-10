@@ -1,19 +1,33 @@
-@font-face {
-    font-family: "Open Sans";
-    src: url("./fonts/open-sans-variable.woff2") format("woff2-variations");
-    font-style: normal;
-    font-weight: 100 800;
-    font-display: swap;
+@supports (font-variation-settings: normal ) {
+    @font-face {
+        font-family: "Open Sans";
+        src: url("./fonts/open-sans-variable.woff2") format("woff2-variations");
+        font-weight: 100 800;
+        font-style: normal;
+        font-display: swap;
+    }
 }
 
-@font-face {
-    font-family: "Open Sans";
-    src: local("Open Sans Italic"),
-        url("./fonts/open-sans-regular.woff2") format("woff2"),
-        url("./fonts/open-sans-variable.woff") format("woff");
-    font-style: italic;
-    font-weight: normal;
-    font-display: swap;
+@supports not (font-variation-settings: normal) {
+    @font-face {
+        font-family: "Open Sans";
+        src: local("Open Sans Regular"),
+            local("OpenSans-Regular"),
+            url("./fonts/open-sans-regular.woff2") format("woff2"),
+            url("./fonts/open-sans-variable.woff") format("woff");
+        font-weight: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "Open Sans";
+        src: local("Open Sans Bold"),
+            local("OpenSans-Bold"),
+            url("./fonts/open-sans-regular.woff2") format("woff2"),
+            url("./fonts/open-sans-variable.woff") format("woff");
+        font-weight: bold;
+        font-display: swap;
+    }
 }
 
 * {
@@ -23,6 +37,7 @@
 body {
     background: rgb(221, 238, 252);
     margin-top: 80px;
+    font-family: "Open Sans", sans-serif;
 }
 
 .card-item {
@@ -61,6 +76,13 @@ body {
     justify-content: space-between;
     padding: 10px 15px;
     margin-bottom: 35px;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.card-item__name, .card-item__dateItem {
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .card-item__content {
@@ -97,9 +119,31 @@ body {
     justify-content: flex-end;
     background: rgb(255, 255, 255);
     color: rgb(26, 59, 93);
+    font-style: italic;
 }
 
 .card-item__holder,
 .card-item__dateTitle {
     opacity: 0.7;
+}
+
+@media (hover: hover) {
+    .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotateY(-180deg);
+    }
+
+    .card-item {
+        transform-style: preserve-3d;
+    }
+
+    .card-item__side {
+        backface-visibility: hidden;
+    }
+
+    .card-item:hover {
+        transform: rotateY(180deg);
+    }
 }
