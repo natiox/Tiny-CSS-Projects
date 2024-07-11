@@ -52,6 +52,7 @@ body {
     height: 100%;
     width: 100%;
     background: url("bg.jpeg") left top / cover blue;
+    border-radius: 15px;
 }
 
 
@@ -120,6 +121,7 @@ body {
     background: rgb(255, 255, 255);
     color: rgb(26, 59, 93);
     font-style: italic;
+    border-radius: 4px;
 }
 
 .card-item__holder,
@@ -127,7 +129,7 @@ body {
     opacity: 0.7;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
     .back {
         position: absolute;
         top: 0;
@@ -137,6 +139,7 @@ body {
 
     .card-item {
         transform-style: preserve-3d;
+        transition: transform 350ms cubic-bezier(0.71, 0.03, 0.56, 0.85);
     }
 
     .card-item__side {
