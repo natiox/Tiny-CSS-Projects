@@ -19,51 +19,16 @@
 }
 
 .share__button:hover,
-.share__button:focus-visible,
-.share_expanded .share__button {
+.share__button:focus-visible {
   cursor: pointer;
   outline: solid 1px black;
   outline-offset: -5px;
 }
 
-.share__menu-item { 
-  list-style: none;
-  background: inherit;
-  border-radius: inherit;
-}
+.share__menu-item { list-style: none; }
 
 .share__menu {
   display: flex;
   margin: 0;
   padding: 0;
-  background: inherit;
-  border-radius: inherit;
-  width: 0;
-  overflow: hidden;
-  transition: width 250ms ease-in-out;
-}
-
-.share__link:link,
-.share__link:visited {
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid 1px transparent;
-  transition: transform ease-in-out 250ms;
-}
-
-.share__link:hover,
-.share__link:focus-visible {
-  border-color: black;
-  outline: none;
-  transform: scale(1.25);
-  background: inherit;
-}
-
-.share_expanded .share__menu {
-  width: 200px;
-  padding: 0 2rem 0 1rem;
 }
