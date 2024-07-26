@@ -25,10 +25,35 @@
   outline-offset: -5px;
 }
 
-.share__menu-item { list-style: none; }
+.share__menu-item { 
+  list-style: none; 
+  background: inherit;
+  border-radius: inherit;
+}
 
 .share__menu {
   display: flex;
   margin: 0;
   padding: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.share__link:link,
+.share__link:visited {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px transparent;
+}
+
+.share__link:hover,
+.share__link:focus-visible {
+  border-color: black;
+  outline: none;
+  transform: scale(1.25);
+  background: inherit;
 }
