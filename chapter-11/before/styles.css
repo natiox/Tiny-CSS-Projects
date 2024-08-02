@@ -19,10 +19,16 @@
 }
 
 .share__button:hover,
-.share__button:focus-visible {
+.share__button:focus-visible,
+.share_expanded .share__button {
   cursor: pointer;
   outline: solid 1px black;
   outline-offset: -5px;
+}
+
+.share_expanded .share__menu {
+  width: 200px;
+  padding: 0 2rem 0 1rem;
 }
 
 .share__menu-item { 
@@ -39,6 +45,7 @@
   border-radius: inherit;
   width: 0;
   overflow: hidden;
+  transition: width 250ms ease-in-out;
 }
 
 .share__link:link,
